@@ -50,17 +50,59 @@ public class SendMessageActivity extends ActionBarActivity {
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+    	
+    	// Handle presses on the action bar items
+        switch (item.getItemId()) {
+        case R.id.action_search:
+    		openSearch();
+        return true;
+        case R.id.action_test:
+            openTest();
+            return true;
+        case R.id.action_settings:
+            openSettings();
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+
 	}
+	
+	public void openSearch() {
+		// Create the text view
+	    TextView textView = new TextView(this);
+	    textView.setTextSize(40);
+	    textView.setText("Search");
+	
+	    // Set the text view as the activity layout
+	    setContentView(textView);
+	}
+    
+    public void openTest() {
+    	// Create the text view
+	    TextView textView = new TextView(this);
+	    textView.setTextSize(40);
+	    textView.setText("Test");
+
+	    // Set the text view as the activity layout
+	    setContentView(textView);
+    }
+    
+    public void openSettings(){
+    	// Create the text view
+	    TextView textView = new TextView(this);
+	    textView.setTextSize(40);
+	    textView.setText("Settings");
+
+	    // Set the text view as the activity layout
+	    setContentView(textView);
+    }
+
 
 	/**
 	 * A placeholder fragment containing a simple view.

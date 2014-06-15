@@ -11,5 +11,7 @@
     <string name="CheckBoxOhad">Ohad</string>
     <string name="Send">Send</string>
     <string name="title_activity_send_message">SendMessageActivity</string>
+    <string name="action_test">Test</string>
+    <string name="action_search">Search</string>
 
 </resources>
